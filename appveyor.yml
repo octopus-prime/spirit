@@ -89,7 +89,7 @@ install:
   - set SELF=spirit
   - cd ..
 #  - git clone -b develop --depth 1 https://github.com/boostorg/boost.git boost-root
-  - git clone -j10 --branch=$BRANCH --depth=1 --quiet --recurse-submodules=":(exclude)$PROJECT" --shallow-submodules https://github.com/boostorg/boost.git boost-root
+  - git clone -j10 --branch=develop --depth=1 --quiet --recurse-submodules=":(exclude)$PROJECT" --shallow-submodules https://github.com/boostorg/boost.git boost-root
   - cd boost-root
 #  - git submodule update --init tools/boostdep
 #  - git submodule update --init tools/build
