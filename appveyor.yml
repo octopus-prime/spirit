@@ -14,9 +14,6 @@ shallow_clone: true
 #    - develop
 #    - master
 
-matrix:
-  fast_finish: true
-
 platform:
   - msvc-14.1
   - msvc-14.0
@@ -40,6 +37,7 @@ environment:
     B2_VARIANT: variant=release
 
 matrix:
+  fast_finish: true
   exclude:
     - configuration: test/x3
       platform: msvc-14.0
