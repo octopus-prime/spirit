@@ -20,7 +20,7 @@ matrix:
 
 environment:
   global:
-    - PROJECT=libs/spirit
+    - PROJECT: libs/spirit
 #    - BOOST_ROOT=$HOME/boost
 #    - BOOST_BUILD_PATH=$HOME/build-boost
 #    - TEST_LINK_DEPS=date_time,filesystem,regex,system
