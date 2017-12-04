@@ -20,7 +20,7 @@ matrix:
 
 environment:
   global:
-    - PROJECT: libs/spirit
+    PROJECT: libs/spirit
 #    - BOOST_ROOT=$HOME/boost
 #    - BOOST_BUILD_PATH=$HOME/build-boost
 #    - TEST_LINK_DEPS=date_time,filesystem,regex,system
@@ -33,10 +33,10 @@ environment:
 #    B2_THREADING: threading=multi,single
 #    B2_VARIANT: variant=release,debug
 
-    - B2_ADDRESS_MODEL: address-model=64
-    - B2_LINK: link=shared
-    - B2_THREADING: threading=multi
-    - B2_VARIANT: variant=release
+    B2_ADDRESS_MODEL: address-model=64
+    B2_LINK: link=shared
+    B2_THREADING: threading=multi
+    B2_VARIANT: variant=release
 
   matrix:
 #    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2013
