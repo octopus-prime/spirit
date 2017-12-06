@@ -4,8 +4,8 @@
     Distributed under the Boost Software License, Version 1.0. (See accompanying
     file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 =============================================================================*/
-#if !defined(SPIRIT_SEQUENCE_DETAIL_JAN_06_2013_1015AM)
-#define SPIRIT_SEQUENCE_DETAIL_JAN_06_2013_1015AM
+#if !defined(BOOST_SPIRIT_X3_SEQUENCE_DETAIL_JAN_06_2013_1015AM)
+#define BOOST_SPIRIT_X3_SEQUENCE_DETAIL_JAN_06_2013_1015AM
 
 #include <boost/spirit/home/x3/support/traits/attribute_of.hpp>
 #include <boost/spirit/home/x3/support/traits/attribute_category.hpp>
@@ -365,6 +365,16 @@ namespace boost { namespace spirit { namespace x3 { namespace detail
         Parser const& parser, Iterator& first, Iterator const& last
       , Context const& context, RContext& rcontext, Attribute& attr
       , traits::optional_attribute)
+    {
+        return parse_sequence_plain(parser, first, last, context, rcontext, attr);
+    }
+
+    template <typename Parser, typename Iterator, typename Context
+      , typename RContext, typename Attribute>
+    bool parse_sequence(
+        Parser const& parser, Iterator& first, Iterator const& last
+      , Context const& context, RContext& rcontext, Attribute& attr
+      , traits::range_attribute)
     {
         return parse_sequence_plain(parser, first, last, context, rcontext, attr);
     }
